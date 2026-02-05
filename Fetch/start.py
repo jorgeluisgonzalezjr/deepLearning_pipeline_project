@@ -2,10 +2,10 @@ import os
 from dotenv import load_dotenv
 from googleapiclient.discovery import build
 
-# 1. Load the secrets from your .env file
+#Load the secrets from your .env file
 load_dotenv()
 
-# 2. Retrieve the Key and Build the Service
+# Retrieve the Key and Build the Service
 try:
     # Get the key from the environment variables
     api_key = os.getenv('YOUTUBE_KEY')
