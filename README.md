@@ -1,6 +1,6 @@
 # deepLearning_pipeline_project
 
-An intelligent data engine that predicts video performance trends. Instead of relying on static, outdated spreadsheets, this project uses a live data pipeline connected directly to YouTube to analyze viewer sentiment on a JoJo's Bizarre Adventure video using an LSTM neural network.
+An intelligent data engine that predicts video performance trends. Instead of relying on static, outdated spreadsheets, this project uses a live data pipeline connected directly to YouTube to analyze viewer sentiment on any YouTube video using an LSTM neural network.
 
 ## Data Collection: YouTube Data API v3
 
@@ -18,7 +18,7 @@ Once extracted, the raw comments are cleaned and labeled. Features engineered du
 
 | comments | comments_norm | is_reply | brand_safe | tox_toxicity | spam_model_prob | label_name | label |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| The full album is a fckk masterpiece 😭😭 | the full album is a fck masterpiece | 0 | 1 | 0.084131 | 0.086141 | positive | 2 |
+| The full album is a  masterpiece 😭😭 | the full album is a masterpiece | 0 | 1 | 0.084131 | 0.086141 | positive | 2 |
 | They have certainly grown up… love their music... | they have certainly grown up love their music ... | 0 | 1 | 0.009205 | 0.152647 | positive | 2 |
 | IF YOU DONT FEAR OF DEATH THIS SONG WAS GOOD T... | if you dont fear of death this song was good t... | 0 | 1 | 0.017461 | 0.077319 | positive | 2 |
 | You are now an official member of The Passione… | you are now an official member of the passione | 0 | 1 | 0.002998 | 0.091827 | neutral | 1 |
