@@ -2,6 +2,10 @@
 
 An intelligent data engine that predicts video performance trends. Instead of relying on static, outdated spreadsheets, this project uses a live data pipeline connected directly to YouTube to analyze viewer sentiment on any YouTube video using an LSTM neural network.
 
+## Problem Statement
+Brands risk reputation damage and wasted ad spend when their advertisements appear alongside toxic or overwhelmingly negative content. Manual checks and static spreadsheets are too slow to keep up with dynamic comment sections. This pipeline solves that by actively evaluating audience sentiment and comment toxicity. By scoring the "brand safety" of a video's audience, it allows advertisers to make immediate, data-driven decisions on whether a specific video is a safe and profitable environment to place their ads.
+
+
 ## Data Collection: YouTube Data API v3
 
 The first step of this pipeline is scraping the raw data directly from the source rather than downloading a pre-made CSV. Using the YouTube Data API v3, a Python script connects to the video and extracts the comments.
