@@ -1,4 +1,4 @@
-# deepLearning_pipeline_project
+# YOUTUBE_API_TO_LSTM 
 
 An intelligent data engine that predicts video performance trends. Instead of relying on static, outdated spreadsheets, this project uses a live data pipeline connected directly to YouTube to analyze viewer sentiment on any YouTube video using an LSTM neural network.
 
