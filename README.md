@@ -1,14 +1,22 @@
 # deepLearning_pipeline_project
 
-An intelligent data engine that predicts video performance trends. Instead of relying on static, outdated spreadsheets, this project uses a live data pipeline connected directly to YouTube to analyze viewer sentiment on any youtube video using an LSTM neural network.
+An intelligent data engine that predicts video performance trends. Instead of relying on static, outdated spreadsheets, this project uses a live data pipeline connected directly to YouTube to analyze viewer sentiment on a JoJo's Bizarre Adventure video using an LSTM neural network.
+
+## Data Collection: YouTube Data API v3
+
+The first step of this pipeline is scraping the raw data directly from the source rather than downloading a pre-made CSV. Using the YouTube Data API v3, a Python script connects to the video and extracts the comments.
+
+* **Authentication:** Secured via an API key generated in the Google Cloud Console.
+* **Extraction:** The script targets the specific video ID, handling pagination to pull the top-level comments and replies.
+* **Formatting:** The raw JSON response is parsed and converted directly into a pandas DataFrame, which serves as the foundation for the cleaning and NLP phases.
 
 ## The Data
 
-The dataset consists of cleaned and labeled YouTube comments. Features include text normalization, brand safety checks, and toxicity scoring. 
+Once extracted, the raw comments are cleaned and labeled. Features engineered during this phase include text normalization, brand safety checks, and toxicity scoring. 
 
-### Data Sample
+## Data Sample
 
-| text | text_norm | is_reply | brand_safe | tox_toxicity | spam_model_prob | label_name | label |
+| comments | comments_norm | is_reply | brand_safe | tox_toxicity | spam_model_prob | label_name | label |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | The full album is a fckk masterpiece 😭😭 | the full album is a fck masterpiece | 0 | 1 | 0.084131 | 0.086141 | positive | 2 |
 | They have certainly grown up… love their music... | they have certainly grown up love their music ... | 0 | 1 | 0.009205 | 0.152647 | positive | 2 |
